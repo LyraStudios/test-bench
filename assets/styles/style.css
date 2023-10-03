@@ -277,42 +277,24 @@ p {
     max-width: 40rem;
 }
 
-button {
-    background-color: transparent;
-    border: solid gray 1px;
-    padding: 0.75rem 3rem;
-    border-radius: 0.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: white;
-    font-size: larger;
-    margin-bottom: 0.5rem;
-    transition: all 0.1s;
-}
 
-button svg {
-    width: 1rem;
-    height: 1rem;
-}
 
-button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-button:active {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    width: 100%;
-    margin-top: 2rem;
-}
-
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        backdrop-filter: blur(10px) saturate(200%) brightness(70%);
+        color: rgb(12, 13, 14);
+        display: flex;
+        height: 7vw;
+        width: 100%;
+        align-items: center;
+        justify-content: left;
+        padding: 0 1%;
+        z-index: 5;
+        margin: auto;
+    }
+    
 @media only screen and (max-width: 786px) {
     body {
         overflow-y: visible;
@@ -347,3 +329,71 @@ nav a:hover {
 nav a:active {
     background-color: rgba(255, 255, 255, 0.2);
 }
+
+a {
+    background-color: transparent;
+    border: solid gray 1px;
+    padding: 0.75rem 3rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    font-size: larger;
+    margin-bottom: 0.5rem;
+    transition: all 0.1s;
+}
+
+a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+a:active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .header-center {
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10%;
+  }
+  
+  .left-margin {
+    margin: 0px 16px;
+  }
+  
+  #uv-error {
+    color: #ff6666 !important;
+    white-space: pre-wrap;
+  }
+  
+  #uv-error-code {
+    font-size: 12px;
+    color: #fff;
+    font-family: "Courier New", Courier, monospace;
+  }
+  
+  #uv-register-sw {
+    color: white;
+    background: #555555;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    padding: 16px 20px;
+    line-height: 16px;
+    display: none;
+  }
+  
+  #uv-register-sw:active {
+    background: #333333;
+  }
+  
+  #uv-register-sw.show {
+    display: block;
+  }
